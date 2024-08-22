@@ -38,3 +38,6 @@
 5. 리스너는 이벤트를 수신하고 처리
 6. 이벤트 처리 완료
 
+
+
+- [Migrate custom Pub/Sub pattern to ApplicationEventPublisher](https://medium.com/@bgpark82/migrate-custom-pub-sub-pattern-to-applicationeventpublisher-e39fa2146e1d)
