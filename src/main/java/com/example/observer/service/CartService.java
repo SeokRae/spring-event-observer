@@ -3,7 +3,7 @@ package com.example.observer.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -21,7 +21,7 @@ public class CartService {
 
   public Map<String, Integer> getCartItems() {
     // 장바구니에 담긴 상품 ID와 수량을 반환
-    return new HashMap<>(cartItems);
+    return Collections.unmodifiableMap(cartItems);
   }
 
   public void clearCart() {

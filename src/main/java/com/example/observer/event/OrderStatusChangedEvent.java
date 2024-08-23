@@ -1,5 +1,6 @@
 package com.example.observer.event;
 
+import com.example.observer.domain.OrderStatus;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 
@@ -7,10 +8,10 @@ import org.springframework.context.ApplicationEvent;
 public class OrderStatusChangedEvent extends ApplicationEvent {
 
   private final String orderId;
-  private final String oldStatus;
-  private final String newStatus;
+  private final OrderStatus oldStatus;
+  private final OrderStatus newStatus;
 
-  public OrderStatusChangedEvent(Object source, String orderId, String oldStatus, String newStatus) {
+  public OrderStatusChangedEvent(Object source, String orderId, OrderStatus oldStatus, OrderStatus newStatus) {
     super(source);
     this.orderId = orderId;
     this.oldStatus = oldStatus;

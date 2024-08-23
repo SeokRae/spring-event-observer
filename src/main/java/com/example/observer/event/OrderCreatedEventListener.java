@@ -1,5 +1,6 @@
 package com.example.observer.event;
 
+import com.example.observer.domain.OrderStatus;
 import com.example.observer.service.ShippingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,7 +29,7 @@ public class OrderCreatedEventListener {
     shippingService.startShipment(orderId);
 
     // 배송 시작 후 주문 상태를 "배송 중"으로 업데이트하는 이벤트 발행
-    eventPublisher.publishEvent(new OrderStatusChangedEvent(this, orderId, "PAYMENT_COMPLETED", "SHIPPING"));
+    eventPublisher.publishEvent(new OrderStatusChangedEvent(this, orderId, OrderStatus.PAYMENT_COMPLETED, OrderStatus.SHIPPING));
     log.info("[이벤트 발행] 주문 ID: {} 상태를 'SHIPPING'으로 업데이트하는 이벤트 발행", orderId);
   }
 }

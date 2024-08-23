@@ -33,7 +33,7 @@ public class OrderController {
     // 1. 카트에 상품 추가
     cartService.addItemToCart(request.getProductId(), request.getQuantity());
 
-    // 2. 주문 ID 생성 (예시로 주문 ID를 1L로 설정, 실제로는 서비스나 DB를 통해 생성)
+    // 2. 주문 ID 생성 (예시로 주문 ID를 ord_1로 설정, 실제로는 서비스나 DB를 통해 생성)
     String orderId = "ord_1";
 
     // 3. 주문 생성 및 이벤트 발행
